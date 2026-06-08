@@ -1,0 +1,12 @@
+{
+  "client_id": "5555",
+  "client_secret": "123456789",
+  "appName": "All In Z",
+  "logo": "/assets/images/logo.svg",
+  "icon": "/assets/images/icon.svg",
+  "default": "/assets/images/noimage.png",
+  "customer_url":"https://allinz.net",
+  "ar_description":"متجر إلكتروني شامل يقدم مجموعة واسعة من المنتجات والخدمات لتلبية احتياجات العملاء في مصر.",
+  "en_description":"A comprehensive e-commerce store offering a wide range of products and services to meet the needs of customers in Egypt.",
+  "image_url":"https://gamiatalzahraa.egtruetech.cloud"
+}

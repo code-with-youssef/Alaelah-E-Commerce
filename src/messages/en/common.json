@@ -1,0 +1,61 @@
+{
+    "combobox": {
+        "loading": "Loading…",
+        "noResults": "No results",
+        "clearAriaLabel": "Clear"
+    },
+    "confirmDialog": {
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "pleaseWait": "Please wait…"
+    },
+    "error": {
+        "title": "Error",
+        "defaultMessage": "Something went wrong!"
+    },
+    "loginNotification": {
+        "defaultMessage": "Please login to add items to your cart",
+        "title": "You are not logged in",
+        "loginNow": "Login Now",
+        "maybeLater": "Maybe Later"
+    },
+    "mapPicker": {
+        "locating": "Locating…",
+        "recenterAriaLabel": "Recenter map"
+    },
+    "mapStep": {
+        "selectedLocation": "Selected location",
+        "dragPinPrompt": "Drag the pin or tap the map…",
+        "nextButton": "Next — fill in details"
+    },
+    "orderSuccessToast": {
+        "title": "Order Placed!",
+        "message": "Your order has been placed successfully. Redirecting you home…",
+        "orderCode": "Order Code"
+    },
+    "pagination": {
+        "showing": "Showing {shown} of {total} products",
+        "pageInfo": "Page {current} of {total}",
+        "loading": "Loading…",
+        "loadMore": "Load more",
+        "allSeen": "You've seen all {total} products"
+    },
+    "locationPicker": {
+        "title": "Choose your location",
+        "subtitle": "We'll use this to show you the products available near you."
+    },
+    "loading": "Loading...",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info"
+}

@@ -1,0 +1,73 @@
+{
+    "loading": "جاري تحميل السلة...",
+    "checkoutBar": {
+        "goToCheckout": "الذهاب إلى الدفع",
+        "currency": "جنيه"
+    },
+    "desktop": {
+        "emptyTitle": "سلتك فارغة",
+        "emptyMessage": "أضف بعض العناصر للبدء",
+        "loginButton": "تسجيل الدخول إلى حسابك",
+        "cartTitle": "السلة",
+        "items": "عناصر",
+        "item": "عنصر",
+        "clearAll": "مسح الكل",
+        "subtotalLabel": "المجموع الفرعي ({count} {count, plural, one{عنصر} other{عناصر}})"
+    },
+    "mobile": {
+        "cartTitle": "السلة",
+        "clearAll": "مسح الكل",
+        "emptyTitle": "سلتك فارغة",
+        "emptyMessage": "أضف بعض العناصر للبدء",
+        "loginButton": "تسجيل الدخول إلى حسابك"
+    },
+    "itemsTable": {
+        "product": "المنتج",
+        "unitPrice": "سعر الوحدة",
+        "quantity": "الكمية",
+        "total": "الإجمالي",
+        "productImageAlt": "صورة منتج {name}",
+        "removeAriaLabel": "إزالة {name} من السلة",
+        "perItem": "{measurement} {unit} لكل قطعة",
+        "perUnit": "لكل {measurement} {unit}",
+        "lowStock": "تبقى {quantity} {unit} فقط",
+        "totalWeightInfo": "({weight} {unit})",
+        "item": "عنصر",
+        "unit": "كجم",
+        "only": "تبقى",
+        "left": "متبقي",
+        "items": "العناصر"
+    },
+    "itemRow": {
+        "productImageAlt": "صورة منتج {name}"
+    },
+    "pointsBanner": {
+        "earnUpTo": "اربح حتى",
+        "pointsWithItems": "نقطة مع هذه العناصر"
+    },
+    "quantitySelector": {
+        "invalidQuantity": "الكمية غير صالحة",
+        "updateFailed": "فشل تحديث الكمية",
+        "decreaseAriaLabel": "تقليل الكمية",
+        "increaseAriaLabel": "زيادة الكمية",
+        "itemCount": "({count} قطعة{plural})",
+        "perStep": "+{step}{unit} لكل خطوة",
+        "errors": {
+            "multipleOf": "الكمية يجب أن تكون من مضاعفات {measurement}",
+            "minQuantity": "الحد الأدنى هو {minQty} ({items} قطعة{plural})",
+            "maxQuantity": "الحد الأقصى هو {maxQty} ({items} قطعة{plural})"
+        },
+        "messages": {
+            "maxWithProduct": "لقد وصلت إلى الحد الأقصى لهذا المنتج",
+            "onlyAvailable": "متاح {maxQty} فقط",
+            "maximum": "لقد وصلت إلى الحد الأقصى للكمية"
+        }
+    },
+    "stockCheck": {
+        "removedOutOfStock": "تمت إزالة {name} — غير متوفر في المخزون بهذا المتجر",
+        "adjustedQty": "تم تعديل {name} من {requested} إلى {available} — الحد المتاح بالمتجر",
+        "storeStockNote": "قد يختلف المخزون بين مناطق التوصيل",
+        "dismiss": "تجاهل",
+        "dismissAll": "تجاهل الكل"
+    }
+}

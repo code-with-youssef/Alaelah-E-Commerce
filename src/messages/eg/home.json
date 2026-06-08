@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "search": "بحث",
+    "cart": "السلة",
+    "more": "المزيد",
+    "categories": "الفئات",
+    "deals": "العروض"
+  },
+  "deals": {
+    "empty": "لا تتوفر عروض الآن."
+  },
+  "best-seller": {
+    "title": "🔥 الأكثر مبيعاً ",
+    "subtitle": "اكتشف المنتجات الأكثر شعبية بين عملائنا!"
+  },
+  "todays-deal": {
+    "title": "⚡ عروض اليوم",
+    "subtitle": "اكتشف أفضل العروض اليوم!"
+  },
+  "featured": {
+    "title": "⭐ المنتجات المميزة",
+    "subtitle": "اكتشف أفضل المنتجات المميزة!"
+  },
+  "desktopNavbar": {
+    "guest": "Guest",
+    "mainNavigation": "Main navigation",
+    "userProfile": "User profile"
+  },
+  "location": {
+    "locating": "جاري التحديد…",
+    "setLocation": "حدد الموقع",
+    "deliveryIn": "التوصيل خلال",
+    "min": "دقيقة",
+    "chatAriaLabel": "الدعم عبر المحادثة",
+    "yourLocation": "موقعك الحالي"
+  },
+  "slider": {
+    "goToSlide": "الانتقال إلى الشريحة {number}",
+    "slideLinkAlt": "عرض الإعلان",
+    "slideImageAlt": "صورة ترويجية",
+    "noBanners": "لا توجد إعلانات ترويجية متاحة.",
+    "bannersCount": "إعلانات",
+    "modalAriaLabel": "جميع الإعلانات",
+    "allBannersTitle": "جميع الإعلانات",
+    "allSlidesTitle": "جميع الشرائح",
+    "slidesCount": "شرائح",
+    "noSlides": "لا توجد شرائح متاحة",
+    "closeAriaLabel": "إغلاق"
+  },
+  "language": {
+    "title": "اللغة"
+  },
+  "appearance": {
+    "title": "المظهر"
+  },
+  "sectionHeader": {
+    "viewAll": "عرض الكل"
+  },
+  "shops": {
+    "title": "تسوق من المتاجر: أحدث إضافاتنا!",
+    "subtitle": "توصيل في اليوم التالي، بواسطة All In Z"
+  },
+  "brands": {
+    "title": " 🏷️ العلامات التجارية",
+    "subtitle": "تسوّق من علاماتك التجارية المفضلة",
+    "errorLoading": "تعذّر تحميل العلامات التجارية",
+    "modalAriaLabel": "جميع العلامات التجارية",
+    "closeAriaLabel": "إغلاق",
+    "noProducts": "لا توجد منتجات لهذه العلامة التجارية",
+    "productCount": "{count} منتج",
+    "officialStore": "المتجر الرسمي",
+    "products": "المنتجات",
+    "allProducts": "كل المنتجات",
+    "back": "الرجوع"
+  },
+  "spotlight": {
+    "title": "تسليط الضوء",
+    "modalAriaLabel": "جميع العناصر المميزة",
+    "closeAriaLabel": "إغلاق",
+    "cardAriaLabel": "عرض {name}"
+  },
+  "categories": {
+    "title": " 🛒 الفئات",
+    "subtitle": "تصفح فئاتنا المختلفة",
+    "loading": "جاري تحميل الفئات...",
+    "explore": "استكشف"
+  },
+  "category": {
+    "title": " 🛒 الفئات",
+    "subtitle": "تصفح فئاتنا المختلفة",
+    "cardAriaLabel": "تصفح فئة {name}",
+    "imageAlt": "صورة فئة {name}"
+  },
+  "theme": {
+    "light": "فاتح",
+    "dark": "داكن",
+    "lightAriaLabel": "التبديل إلى الوضع الفاتح",
+    "darkAriaLabel": "التبديل إلى الوضع الداكن"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "newUser": "مستخدم جديد؟",
+    "createAccount": "إنشاء حساب",
+    "myOrders": "طلباتي",
+    "favourites": "المفضلة",
+    "accountSettings": "إعدادات الحساب",
+    "logout": "تسجيل خروج",
+    "login": "دخول"
+  },
+  "mobileModal": {
+    "menu": "القائمة",
+    "ariaLabel": "خيارات إضافية",
+    "qrCode": "رمز QR"
+  },
+  "userDropdown": {
+    "viewProfile": "عرض الملف الشخصي"
+  },
+  "mobileNav": {
+    "ariaLabel": "قائمة التنقل",
+    "searchAriaLabel": "بحث",
+    "moreAriaLabel": "خيارات إضافية",
+    "search": "بحث",
+    "more": "المزيد"
+  },
+  "footer": {
+    "shop": "تسوق",
+    "allCategories": "جميع الفئات",
+    "newArrivals": "الوافدون الجدد",
+    "dealsOffers": "العروض",
+    "favourites": "المفضلة",
+    "account": "الحساب",
+    "myOrders": "طلباتي",
+    "cart": "السلة",
+    "savedAddresses": "العناوين المحفوظة",
+    "accountSettings": "إعدادات الحساب",
+    "help": "المساعدة",
+    "faq": "الأسئلة الشائعة",
+    "contactUs": "اتصل بنا",
+    "trackOrder": "تتبع طلبي",
+    "returnsPolicy": "سياسة الإرجاع",
+    "company": "الشركة",
+    "aboutUs": "معلومات عنا",
+    "careers": "الوظائف",
+    "press": "صحافة",
+    "sustainability": "الاستدامة",
+    "tagline": "المواد الغذائية الطازجة والحلويات والضروريات يتم توصيلها إلى باب منزلك في دقائق.",
+    "getTheApp": "حمّل التطبيق",
+    "downloadOn": "حمّله على",
+    "appStore": "متجر التطبيقات",
+    "getItOn": "احصل عليه من",
+    "googlePlay": "جوجل بلاي",
+    "instagram": "انستغرام",
+    "twitter": "إكس / تويتر",
+    "facebook": "فيسبوك",
+    "tiktok": "تيك توك",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "cookiePolicy": "سياسة ملفات تعريف الارتباط",
+    "allRightsReserved": "All In Z. جميع الحقوق محفوظة.",
+    "brands": "العلامات التجارية"
+  },
+  "search": {
+    "ariaLabel": "بحث",
+    "placeholder": "عن ماذا تبحث...",
+    "cancel": "إلغاء",
+    "clearAriaLabel": "مسح",
+    "searching": "جارٍ البحث…",
+    "seeAllResults": "عرض كل نتائج \"{query}\"",
+    "searchFor": "البحث عن \"{query}\"",
+    "recent": "البحث الأخير",
+    "removeRecentAriaLabel": "إزالة {term}",
+    "emptyPrompt": "ابدأ الكتابة للبحث عن المنتجات.",
+    "emptyResults": "لم يتم العثور على منتجات لـ \"{query}\".",
+    "resultsCount": "{count} نتيجة لـ \"{query}\"",
+    "noResults": "لا توجد نتائج لـ \"{query}\""
+  },
+  "header": {
+    "title": "نتائج \"{query}\""
+  },
+  "trending": {
+    "label": "الأكثر بحثاً",
+    "freshFruits": "فواكه طازجة",
+    "breakfastDeals": "عروض الإفطار",
+    "dairyCheese": "ألبان وأجبان",
+    "bakery": "مخبوزات",
+    "beverages": "مشروبات",
+    "snacks": "وجبات خفيفة"
+  },
+  "loading": "جاري التحميل...",
+  "viewAll": "عرض الكل",
+  "noProducts": "لا توجد منتجات في هذا التصنيف"
+}

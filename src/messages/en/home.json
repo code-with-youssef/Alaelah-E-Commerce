@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "cart": "Cart",
+    "more": "More",
+    "categories": "Categories",
+    "deals": "Deals"
+  },
+  "desktopNavbar": {
+    "guest": "Guest",
+    "mainNavigation": "Main navigation",
+    "userProfile": "User profile"
+  },
+  "deals": {
+    "empty": "No deals available right now."
+  },
+  "best-seller": {
+    "title": "🔥 Best Selling",
+    "subtitle": "Discover the most popular products among our customers!"
+  },
+  "featured": {
+    "title": "⭐ Featured Products",
+    "subtitle": "Discover the best featured products!"
+  },
+  "todays-deal": {
+    "title": "⚡ Today's Deals",
+    "subtitle": "Discover the best deals today!"
+  },
+  "location": {
+    "locating": "Locating…",
+    "setLocation": "Set location",
+    "deliveryIn": "Delivery in",
+    "min": "min",
+    "chatAriaLabel": "Chat support",
+    "yourLocation": "Your location"
+  },
+  "slider": {
+    "goToSlide": "Go to slide {number}",
+    "slideLinkAlt": "View promotion",
+    "slideImageAlt": "Promotional image",
+    "noBanners": "No promotional banners available.",
+    "bannersCount": "banners",
+    "modalAriaLabel": "All banners",
+    "allBannersTitle": "All Banners",
+    "allSlidesTitle": "All Slides",
+    "slidesCount": "slides",
+    "noSlides": "No slides available",
+    "closeAriaLabel": "Close"
+  },
+  "sectionHeader": {
+    "viewAll": "View all"
+  },
+  "language": {
+    "title": "Language"
+  },
+  "appearance": {
+    "title": "Theme"
+  },
+  "shops": {
+    "title": "Meet Shops: Our latest addition!",
+    "subtitle": "Next-day delivery, fulfilled by All In Z"
+  },
+  "brands": {
+    "title": "🏷️ Brands",
+    "subtitle": "Shop your favourite brands",
+    "errorLoading": "Could not load brands.",
+    "modalAriaLabel": "All brands",
+    "closeAriaLabel": "Close",
+    "noProducts": "No products found for this brand",
+    "productCount": "{count} products",
+    "back": "Go back",
+    "officialStore": "Official Store",
+    "products": "Products",
+    "allProducts": "All Products"
+  },
+  "spotlight": {
+    "title": "The Spotlight",
+    "modalAriaLabel": "All spotlight items",
+    "closeAriaLabel": "Close",
+    "cardAriaLabel": "View {name}"
+  },
+  "categories": {
+    "loading": "Loading categories...",
+    "explore": "Explore"
+  },
+  "category": {
+    "title": "🛒 Categories",
+    "subtitle": "Browse our different categories",
+    "cardAriaLabel": "Browse {name} category",
+    "imageAlt": "{name} category image"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "lightAriaLabel": "Switch to light mode",
+    "darkAriaLabel": "Switch to dark mode"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "newUser": "New user?",
+    "createAccount": "Create account",
+    "myOrders": "My Orders",
+    "favourites": "Favourites",
+    "accountSettings": "Account settings",
+    "logout": "Log out",
+    "login": "Log in"
+  },
+  "mobileModal": {
+    "menu": "Menu",
+    "ariaLabel": "More options",
+    "qrCode": "QR Code"
+  },
+  "userDropdown": {
+    "viewProfile": "View profile"
+  },
+  "mobileNav": {
+    "ariaLabel": "Mobile navigation",
+    "searchAriaLabel": "Search",
+    "moreAriaLabel": "More options",
+    "search": "Search",
+    "more": "More"
+  },
+  "footer": {
+    "shop": "Shop",
+    "allCategories": "All Categories",
+    "newArrivals": "New Arrivals",
+    "dealsOffers": "Deals & Offers",
+    "favourites": "Favourites",
+    "account": "Account",
+    "myOrders": "My Orders",
+    "cart": "Cart",
+    "savedAddresses": "Saved Addresses",
+    "accountSettings": "Account Settings",
+    "help": "Help",
+    "faq": "FAQ",
+    "contactUs": "Contact Us",
+    "trackOrder": "Track My Order",
+    "returnsPolicy": "Returns Policy",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "sustainability": "Sustainability",
+    "tagline": "Fresh groceries, desserts, and essentials delivered to your door in minutes.",
+    "getTheApp": "Get the app",
+    "downloadOn": "Download on the",
+    "appStore": "App Store",
+    "getItOn": "Get it on",
+    "googlePlay": "Google Play",
+    "instagram": "Instagram",
+    "twitter": "X / Twitter",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "allRightsReserved": "All In Z. All rights reserved.",
+    "brands": "Brands"
+  },
+  "search": {
+    "ariaLabel": "Search",
+    "placeholder": "What are you looking for...",
+    "cancel": "Cancel",
+    "clearAriaLabel": "Clear",
+    "searching": "Searching…",
+    "seeAllResults": "See all results for \"{query}\"",
+    "searchFor": "Search for \"{query}\"",
+    "recent": "Recent",
+    "removeRecentAriaLabel": "Remove {term}",
+    "emptyPrompt": "Start typing to search for products.",
+    "emptyResults": "No products found for \"{query}\".",
+    "resultsCount": "{count} results for \"{query}\"",
+    "noResults": "No results for \"{query}\""
+  },
+  "header": {
+    "title": "Results for \"{query}\""
+  },
+  "trending": {
+    "label": "Trending",
+    "freshFruits": "Fresh Fruits",
+    "breakfastDeals": "Breakfast Deals",
+    "dairyCheese": "Dairy & Cheese",
+    "bakery": "Bakery",
+    "beverages": "Beverages",
+    "snacks": "Snacks"
+  },
+  "viewAll": "View all",
+  "noProducts": "No products available in this category"
+}

@@ -1,0 +1,73 @@
+{
+    "loading": "Loading cart...",
+    "checkoutBar": {
+        "goToCheckout": "Go to checkout",
+        "currency": "EGP"
+    },
+    "desktop": {
+        "emptyTitle": "Your cart is empty",
+        "emptyMessage": "Add some items to get started",
+        "loginButton": "Log in to your account",
+        "cartTitle": "Cart",
+        "items": "items",
+        "item": "item",
+        "clearAll": "Clear all",
+        "subtotalLabel": "Subtotal ({count} {count, plural, one{item} other{items}})"
+    },
+    "mobile": {
+        "cartTitle": "Cart",
+        "clearAll": "Clear all",
+        "emptyTitle": "Your cart is empty",
+        "emptyMessage": "Add some items to get started",
+        "loginButton": "Log in to your account"
+    },
+    "itemsTable": {
+        "product": "Product",
+        "unitPrice": "Unit Price",
+        "quantity": "Quantity",
+        "total": "Total",
+        "productImageAlt": "{name} product image",
+        "removeAriaLabel": "Remove {name} from cart",
+        "perItem": "{measurement} {unit} per item",
+        "perUnit": "per {measurement} {unit}",
+        "lowStock": "Only {quantity} {unit} left",
+        "totalWeightInfo": " ({weight} {unit})",
+        "item": "Item",
+        "unit": "kg",
+        "only": "Only",
+        "left": "left",
+        "items": "items"
+    },
+    "itemRow": {
+        "productImageAlt": "{name} product image"
+    },
+    "pointsBanner": {
+        "earnUpTo": "Earn up to",
+        "pointsWithItems": "points with these items"
+    },
+    "quantitySelector": {
+        "invalidQuantity": "Invalid quantity",
+        "updateFailed": "Failed to update quantity",
+        "decreaseAriaLabel": "Decrease quantity",
+        "increaseAriaLabel": "Increase quantity",
+        "itemCount": "({count} item{plural})",
+        "perStep": "+{step}{unit} per step",
+        "errors": {
+            "multipleOf": "Quantity must be in multiples of {measurement}",
+            "minQuantity": "Minimum quantity is {minQty} ({items} item{plural})",
+            "maxQuantity": "Maximum quantity is {maxQty} ({items} item{plural})"
+        },
+        "messages": {
+            "maxWithProduct": "You've reached the maximum quantity for that item",
+            "onlyAvailable": "Only {maxQty} available",
+            "maximum": "You've reached the maximum quantity"
+        }
+    },
+    "stockCheck": {
+        "removedOutOfStock": "{name} was removed — out of stock at this store",
+        "adjustedQty": "{name} adjusted from {requested} to {available} — store limit",
+        "storeStockNote": "Stock may vary between delivery areas",
+        "dismiss": "Dismiss",
+        "dismissAll": "Dismiss all"
+    }
+}

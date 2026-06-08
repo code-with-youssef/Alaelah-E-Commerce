@@ -1,0 +1,57 @@
+{
+    "combobox": {
+        "loading": "جاري التحميل…",
+        "noResults": "لا توجد نتائج",
+        "clearAriaLabel": "مسح"
+    },
+    "confirmDialog": {
+        "confirm": "تأكيد",
+        "cancel": "إلغاء",
+        "pleaseWait": "يرجى الانتظار…"
+    },
+    "error": {
+        "title": "خطأ",
+        "defaultMessage": "حدث خطأ ما!"
+    },
+    "loginNotification": {
+        "defaultMessage": "يرجى تسجيل الدخول لإضافة عناصر إلى سلة التسوق الخاصة بك",
+        "title": "أنت غير مسجل الدخول",
+        "loginNow": "تسجيل الدخول الآن",
+        "maybeLater": "ربما لاحقاً"
+    },
+    "mapPicker": {
+        "locating": "جاري التحديد…",
+        "recenterAriaLabel": "إعادة توسيط الخريطة"
+    },
+    "mapStep": {
+        "selectedLocation": "الموقع المحدد",
+        "dragPinPrompt": "اسحب المؤشر أو اضغط على الخريطة…",
+        "nextButton": "التالي — املأ التفاصيل"
+    },
+    "orderSuccessToast": {
+        "title": "تم تقديم الطلب!",
+        "message": "تم تقديم طلبك بنجاح. جاري إعادة توجيهك إلى الصفحة الرئيسية…",
+        "orderCode": "رمز الطلب"
+    },
+    "pagination": {
+        "showing": "عرض {shown} من {total} منتج",
+        "pageInfo": "الصفحة {current} من {total}",
+        "loading": "جاري التحميل…",
+        "loadMore": "تحميل المزيد",
+        "allSeen": "لقد شاهدت جميع المنتجات {total}"
+    },
+    "loading": "جاري التحميل...",
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "search": "بحث",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "success": "نجاح",
+    "warning": "تحذير",
+    "info": "معلومات"
+}
