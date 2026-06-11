@@ -47,9 +47,7 @@ export function Providers({ children, locale, messages, apiBaseUrl }: ProvidersP
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        {/* NextIntlClientProvider is INSIDE Providers so every context below it
-            (NotificationProvider, LocationGate, LocationPickerModal, Navbar, etc.)
-            can safely call useTranslations() */}
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AuthProvider>
             <NotificationProvider>

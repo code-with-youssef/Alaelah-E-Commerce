@@ -35,6 +35,7 @@ const SUB_VISIBILITY: Record<number, string> = {
 function CategoryBannerCard({ category }: { category: Category }) {
   const imageUrl = useResolvedUrl(category.icon ?? null);
   const href = `/category/${category.id}/${category.slug.replace(/\./g, "")}`;
+  const t = useTranslations("home");
 
   return (
     <Link
@@ -65,7 +66,7 @@ function CategoryBannerCard({ category }: { category: Category }) {
             color: "var(--color-text-muted)",
           }}
         >
-          Explore {category.name}
+          {t("categories.explore")} {category.name}
         </span>
       </div>
     </Link>
