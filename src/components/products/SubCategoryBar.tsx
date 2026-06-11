@@ -19,7 +19,6 @@ export function SubCategoryBar({
   const scrollRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
 
-  console.log("SubCategoryBar rendered with activeId:", activeId);
 
   // Scroll active pill into view whenever activeId changes
   useEffect(() => {

@@ -6,7 +6,7 @@ import { DesktopNavItem } from "./DesktopNavItem";
 import { SearchModal } from "../search/SearchModal";
 import { DesktopMoreDropdown } from "./DesktopMoreDropdown";
 import { DesktopUserDropdown } from "./DesktopUserDropdown";
-import {  NavItemId } from "@/src/config/nav-config";
+import { NavItemId } from "@/src/config/nav-config";
 import { useAuth } from "@/src/contexts/AuthContext";
 import { useTranslations } from "next-intl";
 import { useCart } from "@/src/hooks/cart/useCart";
@@ -37,7 +37,7 @@ export function DesktopNavbar({ activeItem }: DesktopNavbarProps) {
   return (
     <>
       <header
-        className="hidden md:flex items-center justify-between px-6 h-16 sticky top-0 z-50"
+        className="hidden lg:flex items-center justify-between px-6 h-16 sticky top-0 z-50"
         style={{
           backgroundColor: "var(--color-bg)",
           borderBottom: "1px solid var(--color-border)",
@@ -77,6 +77,7 @@ export function DesktopNavbar({ activeItem }: DesktopNavbarProps) {
             }
 
             if (item.id === "more") {
+              const moreIcon = moreOpen ? item.iconActive : item.icon;
               return (
                 <div key={item.id} className="relative">
                   <button
@@ -97,7 +98,24 @@ export function DesktopNavbar({ activeItem }: DesktopNavbarProps) {
                     aria-label={t(moreItem?.labelKey || "nav.more")}
                     aria-expanded={moreOpen}
                   >
-                    <item.icon className="w-[18px] h-[18px]" />
+                    {typeof moreIcon === "string" ? (
+                      <img
+                        src={moreIcon}
+                        alt=""
+                        aria-hidden="true"
+                        className="w-[18px] h-[18px]"
+                      />
+                    ) : (
+                      (() => {
+                        const Icon = moreIcon;
+                        return (
+                          <Icon
+                            className="w-[18px] h-[18px]"
+                            aria-hidden="true"
+                          />
+                        );
+                      })()
+                    )}
                     {t(moreItem?.labelKey || "nav.more")}
                   </button>
                   <DesktopMoreDropdown

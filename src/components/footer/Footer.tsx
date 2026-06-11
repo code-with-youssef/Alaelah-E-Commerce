@@ -30,7 +30,7 @@ export async function Footer() {
       links: [
         { label: t("footer.allCategories"), href: "/categories" },
         { label: t("footer.brands"), href: "/brands" },
-        { label: t("footer.dealsOffers"), href: "/category/2/magazine-offers" },
+        { label: t("footer.dealsOffers"), href: "/deals" },
         { label: t("footer.favourites"), href: "/favourites" },
       ],
     },

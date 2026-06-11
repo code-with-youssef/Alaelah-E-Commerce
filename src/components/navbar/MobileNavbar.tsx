@@ -24,7 +24,7 @@ export function MobileNavbar({ activeItem }: MobileNavbarProps) {
   return (
     <>
       <nav
-        className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex items-stretch"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-50 flex items-stretch"
         style={{
           backgroundColor: "var(--color-bg)",
           borderTop: "1px solid var(--color-border)",
@@ -78,6 +78,8 @@ export function MobileNavbar({ activeItem }: MobileNavbarProps) {
           }
 
           if (item.id === "more") {
+            const moreIcon =
+              moreOpen || activeItem === "more" ? item.iconActive : item.icon;
             return (
               <button
                 key={item.id}
@@ -94,15 +96,29 @@ export function MobileNavbar({ activeItem }: MobileNavbarProps) {
                         : "transparent",
                   }}
                 >
-                  <item.iconActive
-                    className="w-5 h-5"
-                    style={{
-                      color:
-                        moreOpen || activeItem === "more"
-                          ? "var(--color-primary)"
-                          : "var(--color-text-muted)",
-                    }}
-                  />
+                  {typeof moreIcon === "string" ? (
+                    <img
+                      src={moreIcon}
+                      alt=""
+                      aria-hidden="true"
+                      className="w-5 h-5"
+                    />
+                  ) : (
+                    (() => {
+                      const Icon = moreIcon;
+                      return (
+                        <Icon
+                          className="w-5 h-5"
+                          style={{
+                            color:
+                              moreOpen || activeItem === "more"
+                                ? "var(--color-primary)"
+                                : "var(--color-text-muted)",
+                          }}
+                        />
+                      );
+                    })()
+                  )}
                 </span>
                 <span
                   className="text-[10px] font-semibold leading-none"

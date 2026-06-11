@@ -12,8 +12,8 @@
   :root {
     /* --- Brand Colors --- */
     --color-primary:         #F15A24;   /* Primary Blue — main brand / buttons */
-    --color-primary-hover:   #0B4F9C;   /* Deep Blue — darkened hover */
-    --color-primary-light:   #D6EDFB;   /* Light Blue tinted bg */
+    --color-primary-hover:   #bb6969;   /* Deep Blue — darkened hover */
+    --color-primary-light:   #FFE6DA;   /* Light Blue tinted bg */
     --color-primary-muted:   #FFE6DA;   /* Light Blue — lighter accent */
 
     --color-secondary:       #4CAF0B;   /* Primary Green — text / dark UI */

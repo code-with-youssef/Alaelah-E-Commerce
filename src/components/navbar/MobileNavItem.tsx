@@ -12,10 +12,8 @@ interface MobileNavItemProps {
 }
 
 export function MobileNavItem({ item, isActive, badge }: MobileNavItemProps) {
-  const Icon = isActive ? item.iconActive : item.icon;
+  const icon = isActive ? item.iconActive : item.icon;
   const t = useTranslations("home");
-
-  // Get translated label using the labelKey from the config
   const label = t(item.labelKey);
 
   return (
@@ -25,30 +23,34 @@ export function MobileNavItem({ item, isActive, badge }: MobileNavItemProps) {
       aria-current={isActive ? "page" : undefined}
       aria-label={label}
     >
-      {/* Icon container */}
       <span className="relative">
         <span
           className="relative flex items-center justify-center w-10 h-8 rounded-full transition-all duration-150"
-          style={
-            isActive
-              ? { backgroundColor: "var(--color-primary-light)" }
-              : { backgroundColor: "transparent" }
-          }
+          style={isActive ? { backgroundColor: "var(--color-primary-light)" } : { backgroundColor: "transparent" }}
         >
-          <Icon
-            className="w-5 h-5 transition-transform duration-150 group-active:scale-90"
-            style={
-              isActive
-                ? { color: "var(--color-primary)" }
-                : { color: "var(--color-text-muted)" }
-            }
-            aria-hidden="true"
-          />
+          {typeof icon === "string" ? (
+            <img
+              src={icon}
+              alt=""
+              aria-hidden="true"
+              className="w-5 h-5 transition-transform duration-150 group-active:scale-90"
+            />
+          ) : (
+            (() => {
+              const Icon = icon;
+              return (
+                <Icon
+                  className="w-5 h-5 transition-transform duration-150 group-active:scale-90"
+                  style={isActive ? { color: "var(--color-primary)" } : { color: "var(--color-text-muted)" }}
+                  aria-hidden="true"
+                />
+              );
+            })()
+          )}
         </span>
         {badge !== undefined ? <NavBadge count={badge} /> : null}
       </span>
 
-      {/* Label */}
       <span
         className="text-[10px] font-semibold leading-none transition-colors duration-150"
         style={{

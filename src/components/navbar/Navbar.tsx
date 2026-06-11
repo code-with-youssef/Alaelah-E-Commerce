@@ -30,16 +30,23 @@ function shouldShowSearch(pathname: string): boolean {
   const stripped = pathname.replace(/^\/[a-z]{2}(\/|$)/, "/");
   return !NO_SEARCH_ROUTES.some((route) => stripped.startsWith(route));
 }
+function shouldShowLocationHeader(pathname: string): boolean {
+  const stripped = pathname.replace(/^\/[a-z]{2}(\/|$)/, "/");
+  return stripped === "/";
+}
 
 export function Navbar() {
   const pathname = usePathname();
   const activeItem = resolveActiveItem(pathname);
   const showSearch = shouldShowSearch(pathname);
-
+  const showLocationHeader = shouldShowLocationHeader(pathname);
   return (
     <>
       <DesktopNavbar activeItem={activeItem} />
-      <MobileTopBar showSearch={showSearch} />
+      <MobileTopBar
+        showSearch={showSearch}
+        showLocationHeader={showLocationHeader}
+      />
       <MobileNavbar activeItem={activeItem} />
     </>
   );

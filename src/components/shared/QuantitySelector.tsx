@@ -12,7 +12,7 @@ interface QuantitySelectorProps {
   size?: "xs" | "sm" | "md";
   disabled?: boolean;
   showDelete?: boolean;
-  isDisabled?: boolean; // for future use if we want to disable the whole selector (e.g. during checkout)
+  isDisabled?: boolean;
 }
 
 const SIZE_TOKENS = {
@@ -25,6 +25,7 @@ const SIZE_TOKENS = {
     minWidth: "15px",
     minWidthKg: "34px",
     radius: "9999px",
+    fullWidth: false,
   },
   sm: {
     padding: "6px 10px",
@@ -35,16 +36,18 @@ const SIZE_TOKENS = {
     minWidth: "16px",
     minWidthKg: "44px",
     radius: "16px",
+    fullWidth: false,
   },
   md: {
     padding: "10px 14px",
-    gap: "14px",
-    btn: 26,
+    gap: "0",        // space-between handles spacing
+    btn: 38,
     icon: "w-5 h-5",
     font: "17px",
     minWidth: "20px",
     minWidthKg: "52px",
-    radius: "16px",
+    radius: "12px",
+    fullWidth: true,
   },
 } as const;
 
@@ -81,14 +84,16 @@ export function QuantitySelector({
     onIncrement();
   };
 
+  const isMd = size === "sm" || size === "md";
+
   return (
     <div
-      className="flex items-center"
+      className={`flex items-center ${isMd ? "w-full justify-between" : ""}`}
       style={{
         border: "1.5px solid var(--color-primary)",
         backgroundColor: "var(--color-bg-subtle)",
         padding: tokens.padding,
-        gap: tokens.gap,
+        gap: isMd ? undefined : tokens.gap,
         borderRadius: tokens.radius,
       }}
       onClick={(e) => {
@@ -96,6 +101,7 @@ export function QuantitySelector({
         e.stopPropagation();
       }}
     >
+      {/* Decrement / Trash */}
       <button
         type="button"
         onClick={handleDecrement}
@@ -116,6 +122,7 @@ export function QuantitySelector({
         )}
       </button>
 
+      {/* Quantity display */}
       <span
         className="tabular-nums font-bold text-center"
         style={{
@@ -128,6 +135,7 @@ export function QuantitySelector({
         {displayValue}
       </span>
 
+      {/* Increment */}
       <button
         type="button"
         onClick={handleIncrement}

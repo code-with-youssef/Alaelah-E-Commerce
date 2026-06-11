@@ -83,19 +83,7 @@ export function AddToCart({
           {buttonLabel}
         </span>
 
-        <div className="text-right">
-          <p
-            className="text-white font-bold text-base leading-tight"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            {totalPrice.toLocaleString()}
-          </p>
-          {totalOriginal && (
-            <p className="text-white/70 text-xs line-through leading-tight">
-              {totalOriginal.toLocaleString()}
-            </p>
-          )}
-        </div>
+   
       </button>
     </div>
   );

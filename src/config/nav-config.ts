@@ -24,14 +24,15 @@ export type NavItemId =
   | "search"
   | "pay"
   | "cart"
+  | "brands"
   | "more";
 
 export interface NavItem {
   id: NavItemId;
   labelKey: string; // Keep this for translation keys
   href: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
-  iconActive: ComponentType<SVGProps<SVGSVGElement>>;
+  icon: ComponentType<SVGProps<SVGSVGElement>> | string; // Allow string for potential image icons
+  iconActive: ComponentType<SVGProps<SVGSVGElement>> | string;
   badge?: number;
 }
 
@@ -40,43 +41,43 @@ export const NAV_ITEMS: NavItem[] = [
     id: "home",
     labelKey: "nav.home",
     href: "/",
-    icon: HomeIcon,
-    iconActive: HomeSolid,
+    icon: "/assets/icons/category-1.svg",
+    iconActive: "/assets/icons/category-1.svg",
   },
   {
     id: "categories",
     labelKey: "nav.categories",
     href: "/categories",
-    icon: Squares2X2Icon,
-    iconActive: Squares2X2Solid,
+    icon: "/assets/icons/category-4.svg", // Example of using a custom SVG icon
+    iconActive: "/assets/icons/category-4.svg",
+  },
+  {
+    id: "deals",
+    labelKey: "nav.deals",
+    href: "/deals",
+    icon: "/assets/icons/icon-1.svg", // Example of using a custom SVG icon
+    iconActive: "/assets/icons/icon-1.svg",
+  },
+  {
+    id: "brands",
+    labelKey: "nav.brands",
+    href: "/brands",
+    icon: "/assets/icons/category-2.svg", // Example of using a custom SVG icon
+    iconActive: "/assets/icons/category-2.svg",
   },
   {
     id: "cart",
     labelKey: "nav.cart",
     href: "/cart",
-    icon: ShoppingCartIcon,
-    iconActive: CartSolid,
-  },
-  {
-    id: "deals",
-    labelKey: "nav.deals",
-    href: "/category/2/magazine-offers",
-    icon: TagIcon,
-    iconActive: TagSolid,
-  },
-  {
-    id: "search",
-    labelKey: "nav.search",
-    href: "/search",
-    icon: MagnifyingGlassIcon,
-    iconActive: SearchSolid,
+    icon: "/assets/icons/icon-cart2.svg",
+    iconActive: "/assets/icons/icon-cart2.svg",
   },
 
   {
     id: "more",
     labelKey: "nav.more",
     href: "/more",
-    icon: EllipsisHorizontalIcon,
-    iconActive: MoreSolid,
+    icon: "/assets/icons/icon-more.svg",
+    iconActive: "/assets/icons/icon-more.svg",
   },
 ];

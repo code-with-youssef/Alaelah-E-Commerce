@@ -9,14 +9,15 @@ import { LocationHeader } from "../home/location/LocationHeader";
 
 interface MobileTopBarProps {
   showSearch?: boolean;
+  showLocationHeader?: boolean;
 }
 
-export function MobileTopBar({ showSearch = true }: MobileTopBarProps) {
+export function MobileTopBar({ showSearch = true, showLocationHeader = false }: MobileTopBarProps) {
   const { cartCount } = useCart();
 
   return (
     <header
-      className="md:hidden sticky top-0 z-50 flex flex-col"
+      className="lg:hidden sticky top-0 z-50 flex flex-col"
       style={{
         backgroundColor: "var(--color-bg)",
         borderBottom: "1px solid var(--color-border)",
@@ -65,7 +66,6 @@ export function MobileTopBar({ showSearch = true }: MobileTopBarProps) {
           <div className="w-full">
             <SearchBar />
           </div>
-          <LocationHeader deliveryMin={35} deliveryMax={45} />
         </div>
       )}
     </header>

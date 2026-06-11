@@ -70,5 +70,7 @@
     "maxWithProduct": "الحد الأقصى: {maxQty} قطعة لكل طلب",
     "onlyAvailable": "متوفر فقط {maxQty} {unit}",
     "maximum": "الحد الأقصى {maxQty} قطعة",
-    "currency": "ج.م"
+    "currency": "ج.م",
+    "add": "أضف إلى السلة",
+    "remove": "إزالة من السلة"
 }

@@ -70,5 +70,7 @@
     "maxWithProduct": "Limit: {maxQty} item{plural} per order",
     "onlyAvailable": "Only {maxQty} {unit}{plural} available",
     "maximum": "Maximum {maxQty} item{plural}",
-    "currency": "LE"
+    "currency": "LE",
+    "add": "Add to cart",
+    "remove": "Remove from cart"
 }

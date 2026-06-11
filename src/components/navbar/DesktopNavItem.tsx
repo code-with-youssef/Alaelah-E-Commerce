@@ -10,14 +10,12 @@ interface DesktopNavItemProps {
   badge?: number;
 }
 
-
 export function DesktopNavItem({ item, isActive, badge }: DesktopNavItemProps) {
-  const Icon = isActive ? item.iconActive : item.icon;
   const t = useTranslations("home");
-  
-  // Get translated label using the labelKey from the config
   const label = t(item.labelKey);
+  const icon = isActive ? item.iconActive : item.icon;
 
+  console.log(item);
   return (
     <Link
       href={item.href}
@@ -31,12 +29,23 @@ export function DesktopNavItem({ item, isActive, badge }: DesktopNavItemProps) {
       aria-current={isActive ? "page" : undefined}
       aria-label={label}
     >
-      {/* Icon + badge — badge anchors to icon wrapper, sits above it */}
+      {/* Icon + badge */}
       <span className="relative inline-flex items-center justify-center">
-        <Icon
-          className="w-[18px] h-[18px] transition-transform duration-150 group-hover:scale-110"
-          aria-hidden="true"
-        />
+        {typeof icon === "string" ? (
+          <img
+            src={icon}
+            alt=""
+            aria-hidden="true"
+            className="w-[18px] h-[18px] transition-transform duration-150 group-hover:scale-110"
+          />
+        ) : (
+          (() => { const Icon = icon; return (
+            <Icon
+              className="w-[18px] h-[18px] transition-transform duration-150 group-hover:scale-110"
+              aria-hidden="true"
+            />
+          );})()
+        )}
         {badge ? (
           <span
             className="absolute -top-2.5 -right-2.5 min-w-[16px] h-4 px-1 rounded-full
@@ -51,7 +60,7 @@ export function DesktopNavItem({ item, isActive, badge }: DesktopNavItemProps) {
 
       <span
         className="transition-colors duration-150"
-        style={!isActive ? { color: "var(--color-text-muted)" } : { color: "var(--color-primary)" }}
+        style={isActive ? { color: "var(--color-primary)" } : { color: "var(--color-text-muted)" }}
       >
         {label}
       </span>

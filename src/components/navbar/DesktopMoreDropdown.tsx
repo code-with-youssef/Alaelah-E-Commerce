@@ -71,7 +71,7 @@ export function DesktopMoreDropdown({
       </div>
 
       {/* Theme Section */}
-      <div
+{/*       <div
         className="p-4"
         style={{
           borderBottom: !isLoggedIn ? "1px solid var(--color-border)" : "none",
@@ -91,7 +91,7 @@ export function DesktopMoreDropdown({
         </div>
         <ThemeToggle />
       </div>
-
+ */}
       {/* Login Section - Only for logged out users */}
       {!isLoggedIn && (
         <div
