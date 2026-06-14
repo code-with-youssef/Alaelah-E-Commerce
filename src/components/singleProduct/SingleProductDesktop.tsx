@@ -88,7 +88,7 @@ function ImageGallery({
         <div
           className="w-full rounded-3xl overflow-hidden flex items-center justify-center"
           style={{
-            backgroundColor: "var(--color-bg-subtle)",
+
             aspectRatio: "1/1",
             boxShadow: "0 2px 20px rgba(0,0,0,0.07)",
           }}

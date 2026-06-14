@@ -90,18 +90,6 @@ export function HomeProductSection({ type }: { type: HomeProductsType }) {
           >
             {t(`${type}.title`)}
           </h2>
-          {meta?.total !== undefined && (
-            <span
-              className="text-xs px-1.5 py-0.5 rounded-full font-medium"
-              style={{
-                backgroundColor: "var(--color-primary)",
-                color: "#fff",
-                fontFamily: "var(--font-sans)",
-              }}
-            >
-              {meta.total}
-            </span>
-          )}
         </div>
 
         <div className="flex items-center gap-2">

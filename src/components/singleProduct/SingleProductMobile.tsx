@@ -99,7 +99,6 @@ function MobileCarousel({
         className="relative w-full flex items-center justify-center select-none"
         style={{
           minHeight: "260px",
-          backgroundColor: "var(--color-bg-subtle)",
         }}
       >
         {!allResolved ? (

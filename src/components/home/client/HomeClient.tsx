@@ -115,12 +115,12 @@ export function HomeClient() {
         </SectionCard>
       </AnimatedSection>
 
-      <AnimatedSection>
+    {/*   <AnimatedSection>
         <SectionCard>
           <HomeCategorySection />
         </SectionCard>
       </AnimatedSection>
-
+ */}
       <AnimatedSection>
         <SectionCard>
           <HomeProductSection type="best-seller" />
