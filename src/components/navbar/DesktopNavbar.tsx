@@ -28,7 +28,7 @@ export function DesktopNavbar({ activeItem }: DesktopNavbarProps) {
   // ✅ first character of the first word, uppercased — handles empty gracefully
   const userInitial = userName.trim().charAt(0).toUpperCase() || "?";
 
-  const navItems = useNavItems(); // ✅ أضف السطر ده
+  const navItems = useNavItems(); 
 
   // Find the search and more items from config
   const searchItem = navItems.find((item) => item.id === "search");
