@@ -27,13 +27,13 @@ export function MobileTopBar({ showSearch = true, showLocationHeader = false }: 
       {/* Row 1: chat | Logo | cart */}
       <div className="relative flex items-center justify-between px-4 h-12">
         {/* Chat icon */}
-        <button
+      {/*   <button
           className="w-9 h-9 flex items-center justify-center"
           style={{ color: "var(--color-text-muted)" }}
           aria-label="Chat"
         >
           <ChatBubbleLeftEllipsisIcon className="w-6 h-6" />
-        </button>
+        </button> */}
 
         {/* Logo — absolutely centered */}
         <div className="absolute left-1/2 -translate-x-1/2">
