@@ -11,10 +11,12 @@ import { Logo } from "../navbar/Logo";
 import { getTranslations } from "next-intl/server";
 import { loadAppConfig } from "@/src/config/loadAppConfig";
 import { getCurrentLocale } from "@/src/i18n/getCurrentLocale";
+import { FooterAccountLinks } from "./FooterAccountLinks";
+import { FooterFavouritesLink } from "./FooterFavouritesLink";
 
-interface FooterColumn {
-  heading: string;
-  links: { label: string; href: string }[];
+interface FooterLink {
+  label: string;
+  href: string;
 }
 
 export async function Footer() {
@@ -23,47 +25,10 @@ export async function Footer() {
   const config = await loadAppConfig();
   const locale = getCurrentLocale();
 
-
-  const COLUMNS: FooterColumn[] = [
-    {
-      heading: t("footer.shop"),
-      links: [
-        { label: t("footer.allCategories"), href: "/categories" },
-        { label: t("footer.brands"), href: "/brands" },
-        { label: t("footer.dealsOffers"), href: "/deals" },
-        { label: t("footer.favourites"), href: "/favourites" },
-      ],
-    },
-    {
-      heading: t("footer.account"),
-      links: [
-        { label: t("footer.myOrders"), href: "/orders" },
-        { label: t("footer.cart"), href: "/cart" },
-        {
-          label: t("footer.savedAddresses"),
-          href: "/settings/saved-addresses",
-        },
-        { label: t("footer.accountSettings"), href: "/settings" },
-      ],
-    },
-/*     {
-      heading: t("footer.help"),
-      links: [
-        { label: t("footer.faq"), href: "/faq" },
-        { label: t("footer.contactUs"), href: "/contact" },
-        { label: t("footer.trackOrder"), href: "/track" },
-        { label: t("footer.returnsPolicy"), href: "/returns" },
-      ],
-    }, */
-  /*   {
-      heading: t("footer.company"),
-      links: [
-        { label: t("footer.aboutUs"), href: "/about" },
-        { label: t("footer.careers"), href: "/careers" },
-        { label: t("footer.press"), href: "/press" },
-        { label: t("footer.sustainability"), href: "/sustainability" },
-      ],
-    }, */
+  const SHOP_LINKS: FooterLink[] = [
+    { label: t("footer.allCategories"), href: "/categories" },
+    { label: t("footer.brands"), href: "/brands" },
+    { label: t("footer.dealsOffers"), href: "/category/2/magazine-offers" },
   ];
 
   const SOCIAL_LINKS = [
@@ -233,41 +198,57 @@ export async function Footer() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10"
           style={{ borderBottom: "1px solid var(--color-footer-border)" }}
         >
-          {COLUMNS.map((col) => (
-            <div key={col.heading}>
-              <h3
-                className="text-[11px] font-bold uppercase tracking-widest mb-4"
-                style={{
-                  color: "var(--color-primary-muted)",
-                  fontFamily: "var(--font-sans)",
-                }}
-              >
-                {col.heading}
-              </h3>
-              <ul className="flex flex-col gap-2.5">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm transition-colors duration-150 hover:underline"
-                      style={{
-                        color: "var(--color-footer-text-muted)",
-                        fontFamily: "var(--font-sans)",
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Shop column */}
+          <div>
+            <h3
+              className="text-[11px] font-bold uppercase tracking-widest mb-4"
+              style={{
+                color: "var(--color-primary-muted)",
+                fontFamily: "var(--font-sans)",
+              }}
+            >
+              {t("footer.shop")}
+            </h3>
+            <ul className="flex flex-col gap-2.5">
+              {SHOP_LINKS.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm transition-colors duration-150 hover:underline"
+                    style={{
+                      color: "var(--color-footer-text-muted)",
+                      fontFamily: "var(--font-sans)",
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <FooterFavouritesLink
+                label={t("footer.favourites")}
+                color="var(--color-footer-text-muted)"
+              />
+            </ul>
+          </div>
+
+          {/* Account column — only rendered client-side when a user exists */}
+          <FooterAccountLinks
+            labels={{
+              myOrders: t("footer.myOrders"),
+              cart: t("footer.cart"),
+              savedAddresses: t("footer.savedAddresses"),
+              accountSettings: t("footer.accountSettings"),
+              account: t("footer.account"),
+            }}
+            textMutedColor="var(--color-footer-text-muted)"
+            headingColor="var(--color-primary-muted)"
+          />
         </div>
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-        {/*     {LEGAL_LINKS.map((link, i) => (
+            {/*     {LEGAL_LINKS.map((link, i) => (
               <span key={link.label} className="flex items-center gap-5">
                 <Link
                   href={link.href}
