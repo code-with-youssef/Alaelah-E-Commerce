@@ -161,7 +161,7 @@ export function DetailsModal({ product, isOpen, onClose }: DetailsModalProps) {
   // Build rows from real Product fields
   const categoryName = product.category;
   const brandName = product.brand;
-  const variantLabel = getWeightLabel(product.variant);
+  const variantLabel = getWeightLabel(product.variant, product.unit_type, product.unit);
   const unitLabel = product.unit;
 
   const hasDetails = categoryName || brandName || variantLabel || unitLabel;

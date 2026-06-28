@@ -99,6 +99,7 @@ function MobileCarousel({
         className="relative w-full flex items-center justify-center select-none"
         style={{
           minHeight: "260px",
+          backgroundColor: "var(--color-bg-subtle)",
         }}
       >
         {!allResolved ? (
@@ -202,7 +203,7 @@ export function SingleProductMobile({
   const { minQuantity, maxQuantity, measurement } = useProductLimits(product);
 
   const inStock = maxQuantity > 0;
-  const weightLabel = getWeightLabel(product.variant);
+  const weightLabel = getWeightLabel(product.variant, product.unit_type, product.unit);
   const brandName = product.name ?? null;
   const hasDiscount = product.has_discount && product.discount;
 

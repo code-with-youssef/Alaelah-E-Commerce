@@ -17,6 +17,7 @@ export interface Product {
   category: string;
   brand: string;
   unit: string;
+  unit_type: number;
   variant: string;
 
   category_id: number;

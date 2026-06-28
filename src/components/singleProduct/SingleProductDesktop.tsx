@@ -88,7 +88,7 @@ function ImageGallery({
         <div
           className="w-full rounded-3xl overflow-hidden flex items-center justify-center"
           style={{
-
+            backgroundColor: "var(--color-bg-subtle)",
             aspectRatio: "1/1",
             boxShadow: "0 2px 20px rgba(0,0,0,0.07)",
           }}
@@ -173,7 +173,7 @@ export function SingleProductDesktop({
   const { minQuantity, maxQuantity, measurement } = useProductLimits(product);
 
   const inStock = maxQuantity > 0;
-  const weightLabel = getWeightLabel(product.variant);
+  const weightLabel = getWeightLabel(product.variant, product.unit_type, product.unit);
   const brandName = product.brand;
   const hasDiscount = product.has_discount && product.discount;
 
