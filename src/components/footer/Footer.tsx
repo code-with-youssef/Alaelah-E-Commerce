@@ -8,9 +8,8 @@ import {
   TwitterXIcon,
 } from "../common/icons/SocialIcons";
 import { Logo } from "../navbar/Logo";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { loadAppConfig } from "@/src/config/loadAppConfig";
-import { getCurrentLocale } from "@/src/i18n/getCurrentLocale";
 import { FooterAccountLinks } from "./FooterAccountLinks";
 import { FooterFavouritesLink } from "./FooterFavouritesLink";
 
@@ -23,7 +22,7 @@ export async function Footer() {
   const t = await getTranslations("home");
   const year = new Date().getFullYear();
   const config = await loadAppConfig();
-  const locale = getCurrentLocale();
+  const locale = await getLocale();
 
   const SHOP_LINKS: FooterLink[] = [
     { label: t("footer.allCategories"), href: "/categories" },
@@ -52,12 +51,6 @@ export async function Footer() {
       href: "https://tiktok.com",
       icon: <TikTokIcon />,
     },
-  ];
-
-  const LEGAL_LINKS = [
-    { label: t("footer.privacyPolicy"), href: "/privacy" },
-    { label: t("footer.termsOfService"), href: "/terms" },
-    { label: t("footer.cookiePolicy"), href: "/cookies" },
   ];
 
   return (
@@ -113,15 +106,6 @@ export async function Footer() {
           </div>
           {/* App download buttons */}
           <div>
-            <p
-              className="text-[11px] font-bold uppercase tracking-widest mb-3"
-              style={{
-                color: "var(--color-footer-text-faint)",
-                fontFamily: "var(--font-sans)",
-              }}
-            >
-              {t("footer.getTheApp")}
-            </p>
             <div className="flex flex-col gap-2.5">
               <a
                 href="#"
@@ -195,11 +179,11 @@ export async function Footer() {
 
         {/* Nav columns */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10"
+          className="flex flex-wrap gap-8 pb-10"
           style={{ borderBottom: "1px solid var(--color-footer-border)" }}
         >
           {/* Shop column */}
-          <div>
+          <div className="min-w-[140px]">
             <h3
               className="text-[11px] font-bold uppercase tracking-widest mb-4"
               style={{
@@ -246,34 +230,7 @@ export async function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            {/*     {LEGAL_LINKS.map((link, i) => (
-              <span key={link.label} className="flex items-center gap-5">
-                <Link
-                  href={link.href}
-                  className="text-xs transition-colors duration-150 hover:underline"
-                  style={{
-                    color: "var(--color-footer-text-faint)",
-                    fontFamily: "var(--font-sans)",
-                  }}
-                >
-                  {link.label}
-                </Link>
-                {i < LEGAL_LINKS.length - 1 && (
-                  <span
-                    style={{
-                      color: "var(--color-footer-border)",
-                      fontSize: "10px",
-                    }}
-                  >
-                    •
-                  </span>
-                )}
-              </span>
-            ))} */}
-          </div>
-
+        <div className="flex items-center justify-center pt-8">
           <p
             className="text-xs"
             style={{

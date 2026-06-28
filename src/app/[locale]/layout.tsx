@@ -54,7 +54,7 @@ export default async function RootLayout({
         {/* locale + messages flow into NextIntlClientProvider inside Providers */}
         <Providers locale={locale} messages={messages} apiBaseUrl={apiBaseUrl}>
           <main
-            className="flex-1 px-4 md:px-6 lg:px-8 pb-16 md:pb-24"
+            className="flex-1 px-4 md:px-6 lg:px-8"
             dir={locale === "eg" ? "rtl" : "ltr"}
           >
             <Navbar />

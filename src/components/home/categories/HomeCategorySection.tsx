@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import { useQuery } from "@tanstack/react-query";
+import { useQueries } from "@tanstack/react-query";
 import {
   useSubCategories,
   useCategories,
@@ -26,29 +26,43 @@ export function HomeCategorySection() {
   const { data: subCategories, isLoading: subsLoading } =
     useSubCategories(categoryId);
 
-  const resolvedSubId = activeSubId ?? subCategories?.[0]?.id ?? null;
-
-  const {
-    data: result,
-    isLoading: productsLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["home-cat-section", resolvedSubId, nearestStoreId],
-    queryFn: () => fetchProducts(resolvedSubId!, 1, nearestStoreId),
-    enabled: !!resolvedSubId,
-    staleTime: 1000 * 60 * 5,
+  // ── Fetch first-page products for EVERY sub, so we know which ones are empty ──
+  const subProductQueries = useQueries({
+    queries: (subCategories ?? []).map((sub) => ({
+      queryKey: ["home-cat-section", sub.id, nearestStoreId],
+      queryFn: () => fetchProducts(sub.id, 1, nearestStoreId),
+      enabled: !!subCategories,
+      staleTime: 1000 * 60 * 5,
+    })),
   });
 
-  const firstPageProducts = result?.products ?? [];
+  const subsLoadingProducts = subProductQueries.some((q) => q.isLoading);
 
-  // Don't render until subs have loaded
-  if (subsLoading) return null;
+  // ── Subs that actually have products ──
+  const subsWithProducts = useMemo(() => {
+    if (!subCategories) return [];
+    return subCategories.filter((_, i) => {
+      const q = subProductQueries[i];
+      if (!q || q.isLoading || q.isError) return false;
+      return (q.data?.products?.length ?? 0) > 0;
+    });
+  }, [subCategories, subProductQueries]);
 
-  // No subs at all — hide the whole section
-  if (!subCategories || subCategories.length === 0) return null;
+  const resolvedSubId = activeSubId ?? subsWithProducts[0]?.id ?? null;
 
-  // Products loaded and empty — hide the whole section
-  if (!productsLoading && firstPageProducts.length === 0) return null;
+  const activeIndex = subCategories?.findIndex((s) => s.id === resolvedSubId) ?? -1;
+  const activeQuery = activeIndex >= 0 ? subProductQueries[activeIndex] : undefined;
+
+  const firstPageProducts = activeQuery?.data?.products ?? [];
+  const productsLoading = activeQuery?.isLoading ?? subsLoadingProducts;
+  const isError = activeQuery?.isError ?? false;
+
+  // Don't render until subs (and their product counts) have loaded
+  if (subsLoading || subsLoadingProducts) return null;
+
+  // No subs at all, or none have products — hide the whole section
+  if (!subCategories || subCategories.length === 0 || subsWithProducts.length === 0)
+    return null;
 
   if (isError) return null;
 
@@ -109,12 +123,12 @@ export function HomeCategorySection() {
         )}
       </div>
 
-      {/* ── Subcategory pill tabs ── */}
+      {/* ── Subcategory pill tabs (only subs that have products) ── */}
       <div
         className="flex gap-2 overflow-x-auto pb-2 mb-3 scroll-smooth"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {subCategories.map((sub) => {
+        {subsWithProducts.map((sub) => {
           const isActive = sub.id === resolvedSubId;
           return (
             <button
