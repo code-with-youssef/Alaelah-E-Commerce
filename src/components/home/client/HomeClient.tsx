@@ -78,13 +78,13 @@ export function HomeClient() {
       style={{ backgroundColor: "var(--color-bg)" }}
     >
       {/* Mobile: location scrolls with page, no smart hide needed */}
-      <div className="md:hidden px-4">
+      <div className="lg:hidden px-4">
         <LocationHeader deliveryMin={35} deliveryMax={45} />
       </div>
 
       {/* Desktop: smart-hide bar — slides up into navbar on scroll down, back on scroll up */}
       <div
-        className="hidden md:flex fixed left-0 right-0 z-30 items-center gap-4 px-6 py-2 mx-6"
+        className="hidden lg:flex fixed left-0 right-0 z-30 items-center gap-4 px-6 py-2 mx-6"
         style={{
           top: "60px",
           backgroundColor: "var(--color-bg)",
@@ -101,7 +101,7 @@ export function HomeClient() {
         </div>
       </div>
       {/* Spacer so content doesn't sit under the fixed bar */}
-      <div className="hidden md:block h-[68px]" />
+      <div className="hidden lg:block h-[68px]" />
 
       <AnimatedSection>
         <div style={{ backgroundColor: "var(--color-bg)" }}>
