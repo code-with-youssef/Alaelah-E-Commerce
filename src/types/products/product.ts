@@ -6,18 +6,17 @@ export interface ProductLinks {
   details: string;
 }
 
-
 export interface Product {
   id: number;
   name: string;
-  slug:string;
+  slug: string;
   barcode: string;
   description: string;
 
   category: string;
   brand: string;
-  unit: string;
   unit_type: number;
+  unit: string;
   variant: string;
 
   category_id: number;
@@ -46,6 +45,7 @@ export interface Product {
   is_in_wishlist: boolean;
   is_in_cart: boolean;
   qty_in_cart: number;
+  is_nagtive_stock_enable: boolean;
 
   stock_qty: number;
 }

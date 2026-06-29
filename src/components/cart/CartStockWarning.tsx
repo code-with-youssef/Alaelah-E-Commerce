@@ -51,18 +51,17 @@ export function CartStockWarning({
               style={{ color: "var(--color-text)", fontFamily: "var(--font-sans)" }}
             >
               {w.availableQty === 0
-                ? t("stockCheck.removedOutOfStock", { name: w.productName })
-                : t("stockCheck.adjustedQty", {
+                ? t("stockCheck.outOfStock", { name: w.productName })
+                : t("stockCheck.exceedsAvailable", {
                     name: w.productName,
                     available: w.availableQty,
-                    requested: w.requestedQty,
                   })}
             </p>
             <p
               className="text-xs mt-0.5"
               style={{ color: "var(--color-text-muted)", fontFamily: "var(--font-sans)" }}
             >
-              {t("stockCheck.storeStockNote")}
+              {t("stockCheck.adjustQtyNote")}
             </p>
           </div>
 

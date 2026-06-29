@@ -119,6 +119,7 @@ export function CartItemRow({ item }: CartItemRowProps) {
               style={{
                 width: "72px",
                 height: "72px",
+                backgroundColor: "var(--color-bg-subtle)",
               }}
             >
               <img

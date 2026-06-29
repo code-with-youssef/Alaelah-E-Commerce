@@ -11,7 +11,8 @@ import { useCartStockCheck } from "@/src/hooks/cart/useCartStockCheck";
 export function CartClient() {
   const router = useRouter();
   const { cartItems, isLoading, removeFromCart } = useCart();
-  const { warnings, dismissWarning, dismissAll } = useCartStockCheck();
+  const { warnings, dismissWarning, dismissAll, hasUnresolvedWarnings } =
+    useCartStockCheck();
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
   const t = useTranslations("cart");
 
@@ -54,6 +55,7 @@ export function CartClient() {
     warnings,
     onDismissWarning: dismissWarning,
     onDismissAllWarnings: dismissAll,
+    hasUnresolvedWarnings,
   };
 
   return isMobile ? (

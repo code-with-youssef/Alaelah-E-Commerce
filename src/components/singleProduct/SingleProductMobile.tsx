@@ -22,7 +22,7 @@ import { useNotification } from "@/src/contexts/NotificationContext";
 import { useAuth } from "@/src/contexts/AuthContext";
 import { useResolvedUrl } from "@/src/hooks/shared/useResolvedUrl";
 import { getWeightLabel } from "@/src/utils/GetWeightLabel";
-import { useProductLimits } from "@/src/hooks/cart/useProductItemLimits";
+import { useCartItemLimits } from "@/src/hooks/cart/useCartItemLimits";
 
 interface SingleProductMobileProps {
   product: Product;
@@ -200,7 +200,7 @@ export function SingleProductMobile({
   const { cartCount, addToCart, isAdding } = useCart();
 
   // ── limits derived from product type + stock ──────────────────────────
-  const { minQuantity, maxQuantity, measurement } = useProductLimits(product);
+  const { minQuantity, maxQuantity, measurement } = useCartItemLimits(product);
 
   const inStock = maxQuantity > 0;
   const weightLabel = getWeightLabel(product.variant, product.unit_type, product.unit);

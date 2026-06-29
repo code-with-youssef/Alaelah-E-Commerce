@@ -17,6 +17,7 @@ interface CartDesktopProps {
   warnings: StockWarning[];
   onDismissWarning: (productId: number) => void;
   onDismissAllWarnings: () => void;
+  hasUnresolvedWarnings: boolean;
 }
 
 export function CartDesktop({
@@ -27,6 +28,7 @@ export function CartDesktop({
   warnings,
   onDismissWarning,
   onDismissAllWarnings,
+  hasUnresolvedWarnings,
 }: CartDesktopProps) {
   const { loading: authLoading } = useAuth();
   const t = useTranslations("cart");
@@ -135,7 +137,11 @@ export function CartDesktop({
               </div>
 
               <div className="shrink-0 w-72">
-                <CartCheckoutBar subtotal={subtotal} fixed={false} />
+                <CartCheckoutBar
+                  subtotal={subtotal}
+                  fixed={false}
+                  disabled={hasUnresolvedWarnings}
+                />
               </div>
             </div>
           </>

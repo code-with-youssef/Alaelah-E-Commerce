@@ -17,6 +17,7 @@ interface CartMobileProps {
   warnings: StockWarning[];
   onDismissWarning: (productId: number) => void;
   onDismissAllWarnings: () => void;
+  hasUnresolvedWarnings: boolean;
 }
 
 export function CartMobile({
@@ -26,6 +27,7 @@ export function CartMobile({
   warnings,
   onDismissWarning,
   onDismissAllWarnings,
+  hasUnresolvedWarnings,
 }: CartMobileProps) {
   const { loading: authLoading } = useAuth();
   const t = useTranslations("cart");
@@ -110,7 +112,13 @@ export function CartMobile({
         )}
       </div>
 
-      {items.length > 0 && <CartCheckoutBar subtotal={subtotal} fixed />}
+      {items.length > 0 && (
+        <CartCheckoutBar
+          subtotal={subtotal}
+          fixed
+          disabled={hasUnresolvedWarnings}
+        />
+      )}
     </div>
   );
 }
