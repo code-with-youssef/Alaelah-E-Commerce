@@ -72,7 +72,7 @@ export async function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
           {/* Brand block */}
           <div className="max-w-xs">
-            <div className="flex justify-start">
+            <div className="flex justify-start mt-3">
               <Logo width={140} height={40} />
             </div>
             <p
